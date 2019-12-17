@@ -1,6 +1,13 @@
-.indexpage {
+.homepage {
   align-items: center;
   display: flex;
   flex-direction: column;
   padding: 20px 80px;
+}
+
+.signin-signup {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  width: 850px;
 }
