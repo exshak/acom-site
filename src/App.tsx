@@ -4,6 +4,7 @@ import './App.css'
 import Header from './components/header'
 import { IndexPage } from './pages/index'
 import { ShopPage } from './pages/shop'
+import { SignInPage } from './pages/signin'
 
 const App: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <Switch>
         <Route exact path='/' component={IndexPage} />
         <Route path='/shop' component={ShopPage} />
+        <Route path='/signin' component={SignInPage} />
       </Switch>
     </div>
   )
