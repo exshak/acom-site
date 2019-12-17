@@ -3,13 +3,13 @@ import MenuItem from '../menuItem'
 import { sections } from './sections'
 import './styles.scss'
 
-type MyProps = {}
+type Props = {}
 
-type MyState = {
+type State = {
   sections: Array<Object>
 }
 
-class Directory extends React.Component<MyProps, MyState> {
+class Directory extends React.Component<Props, State> {
   state = { sections }
 
   render() {
