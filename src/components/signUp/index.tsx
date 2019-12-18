@@ -1,4 +1,5 @@
 import React from 'react'
+import { auth, createUserProfileDocument } from '../../firebase/utils'
 import Button from '../common/button'
 import FormInput from '../common/formInput'
 import './styles.scss'
@@ -8,10 +9,10 @@ type Props = {
 }
 
 type State = {
-  displayName: String
-  email: String
-  password: String
-  confirmPassword: String
+  displayName: string
+  email: string
+  password: string
+  confirmPassword: string
 }
 
 class SignUp extends React.Component<Props, State> {
@@ -29,11 +30,29 @@ class SignUp extends React.Component<Props, State> {
   handleSubmit = async (event: any) => {
     event.preventDefault()
 
-    const { password, confirmPassword } = this.state
+    const { displayName, email, password, confirmPassword } = this.state
 
     if (password !== confirmPassword) {
       alert("passwords don't match")
       return
+    }
+
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      )
+
+      await createUserProfileDocument(user, { displayName })
+
+      this.setState({
+        displayName: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+      })
+    } catch (error) {
+      console.error(error)
     }
   }
 

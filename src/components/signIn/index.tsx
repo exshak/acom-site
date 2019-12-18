@@ -1,4 +1,5 @@
 import React from 'react'
+import { auth, signInWithGoogle } from '../../firebase/utils'
 import Button from '../common/button'
 import FormInput from '../common/formInput'
 import './styles.scss'
@@ -8,8 +9,8 @@ type Props = {
 }
 
 type State = {
-  email: String
-  password: String
+  email: string
+  password: string
 }
 
 class SignIn extends React.Component<Props, State> {
@@ -22,10 +23,17 @@ class SignIn extends React.Component<Props, State> {
     }
   }
 
-  handleSubmit = (event: any) => {
+  handleSubmit = async (event: any) => {
     event.preventDefault()
 
-    this.setState({ email: '', password: '' })
+    const { email, password } = this.state
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password)
+      this.setState({ email: '', password: '' })
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   handleChange = (event: any) => {
@@ -37,7 +45,7 @@ class SignIn extends React.Component<Props, State> {
   render() {
     return (
       <div className='sign-in'>
-        <h2>I already have an account</h2>
+        <h2 className='title'>I already have an account</h2>
         <span>Sign in with your email and password</span>
 
         <form onSubmit={this.handleSubmit}>
@@ -57,7 +65,12 @@ class SignIn extends React.Component<Props, State> {
             label='password'
             required
           />
-          <Button type='submit'> Sign in </Button>
+          <div className='buttons'>
+            <Button type='submit'> Sign in </Button>
+            <Button onClick={signInWithGoogle} isGoogleSignIn>
+              Sign in with Google
+            </Button>
+          </div>
         </form>
       </div>
     )
