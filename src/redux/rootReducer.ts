@@ -4,5 +4,6 @@ import userReducer from './user/userReducer'
 
 export default combineReducers({
   user: userReducer,
+  // @ts-ignore
   cart: cartReducer
 })

@@ -10,8 +10,8 @@ const ShopView = ({ title, items }: any) => (
       {items
         // @ts-ignore FIXME:
         .filter((item, idx) => idx < 4)
-        .map(({ id, ...otherItemProps }: any) => (
-          <ShopItem key={id} {...otherItemProps} />
+        .map((item: any) => (
+          <ShopItem key={item.id} item={item} />
         ))}
     </div>
   </div>
