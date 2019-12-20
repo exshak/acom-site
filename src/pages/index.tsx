@@ -3,7 +3,7 @@ import Directory from '../components/directory'
 import './styles.scss'
 
 export const HomePage = () => (
-  <div className='homepage'>
+  <div className='home-page'>
     <Directory />
   </div>
 )
