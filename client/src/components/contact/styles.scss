@@ -1,0 +1,20 @@
+.contact-image {
+  img {
+    align-self: center;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid var(--black);
+    height: 500px;
+    width: 400px;
+  }
+}
+
+.contact-area {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+
+  .title {
+    margin: 10px 0;
+  }
+}

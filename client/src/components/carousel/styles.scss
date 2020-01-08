@@ -1,0 +1,12 @@
+.slide-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+
+  img {
+    background-position: center;
+    background-size: cover;
+    border: 1px solid var(--black);
+    height: auto;
+    opacity: 0.9;
+    width: 100%;
+  }
+}

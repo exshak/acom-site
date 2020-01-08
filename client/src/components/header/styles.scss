@@ -1,9 +1,13 @@
 .header {
+  background-color: var(--background);
   display: flex;
   height: 70px;
   justify-content: space-between;
   margin-bottom: 25px;
+  position: sticky;
+  top: 0;
   width: 100%;
+  z-index: 1;
 
   .logo-container {
     height: 100%;
@@ -11,6 +15,7 @@
     width: 70px;
 
     @media screen and (max-width: 800px) {
+      opacity: 0;
       padding: 0;
       width: 50px;
     }

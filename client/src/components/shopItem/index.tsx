@@ -17,7 +17,7 @@ const ShopItem = ({ item, addItem }: any) => {
       />
       <div className='shop-footer'>
         <span className='name'>{name}</span>
-        <span className='price'>{price}</span>
+        <span className='price'>${price}</span>
       </div>
       <Button onClick={() => addItem(item)} inverted>
         Add to cart

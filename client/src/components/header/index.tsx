@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { createStructuredSelector } from 'reselect'
-import { ReactComponent as Logo } from '../../assets/logo.svg'
+import { ReactComponent as Logo } from '../../assets/icons/logo.svg'
 import { selectCartHidden } from '../../redux/cart/cartSelectors'
 import { signOutStart } from '../../redux/user/userActions'
 import { selectCurrentUser } from '../../redux/user/userSelectors'
@@ -16,10 +16,13 @@ const Header = ({ currentUser, hidden, signOutStart }: any) => (
       <Logo className='logo' />
     </Link>
     <div className='options'>
+      <Link className='option' to='/'>
+        HOME
+      </Link>
       <Link className='option' to='/shop'>
         SHOP
       </Link>
-      <Link className='option' to='/shop'>
+      <Link className='option' to='/contact'>
         CONTACT
       </Link>
       {currentUser ? (

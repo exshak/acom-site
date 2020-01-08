@@ -2,7 +2,16 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
 
-const config = {}
+const config = {
+  apiKey: 'AIzaSyCUB83oOXtpa9GEzcDWuDUUX3hFweyGmwo',
+  authDomain: 'acom-site.firebaseapp.com',
+  databaseURL: 'https://acom-site.firebaseio.com',
+  projectId: 'acom-site',
+  storageBucket: 'acom-site.appspot.com',
+  messagingSenderId: '634305137944',
+  appId: '1:634305137944:web:1b13aa5403fb9ed06e226d',
+  measurementId: 'G-6RXDGY5R75'
+}
 
 firebase.initializeApp(config)
 
@@ -18,7 +27,9 @@ export const createUserProfileDocument = async (
 
   if (!snapShot.exists) {
     const { displayName, email } = userAuth
+
     const createdAt = new Date()
+
     try {
       await userRef.set({
         displayName,
@@ -41,8 +52,10 @@ export const addCollectionAndDocuments = async (
   const collectionRef = firestore.collection(collectionKey)
 
   const batch = firestore.batch()
+
   objectsToAdd.forEach((obj: any) => {
     const newDocRef = collectionRef.doc()
+
     batch.set(newDocRef, obj)
   })
 

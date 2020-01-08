@@ -37,9 +37,9 @@ const SignIn = ({ emailSignInStart, googleSignInStart }: any) => {
         <FormInput
           name='email'
           type='email'
-          handleChange={handleChange}
           value={email}
-          label='email'
+          handleChange={handleChange}
+          label='Email'
           required
         />
         <FormInput
@@ -47,11 +47,11 @@ const SignIn = ({ emailSignInStart, googleSignInStart }: any) => {
           type='password'
           value={password}
           handleChange={handleChange}
-          label='password'
+          label='Password'
           required
         />
         <div className='buttons'>
-          <Button type='submit'> Sign in </Button>
+          <Button type='submit'>Sign in</Button>
           <Button onClick={googleSignInStart} isGoogleSignIn>
             Sign in with Google
           </Button>

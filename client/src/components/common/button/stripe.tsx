@@ -4,7 +4,7 @@ import StripeCheckout from 'react-stripe-checkout'
 
 const StripeButton = ({ price }: any) => {
   const priceForStripe = price * 100
-  const publishableKey = ''
+  const publishableKey = 'pk_test_748sV5x0UJuZUlSUOP9eXmtr'
 
   const onToken = (token: any) => {
     axios({
@@ -29,7 +29,7 @@ const StripeButton = ({ price }: any) => {
   return (
     <StripeCheckout
       label='Pay Now'
-      name=''
+      name='Apex Apparel'
       billingAddress
       shippingAddress
       image='https://svgshare.com/i/CUz.svg'

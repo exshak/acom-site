@@ -1,7 +1,7 @@
 .custom-button {
-  background-color: black;
+  background-color: var(--black);
   border: none;
-  color: white;
+  color: var(--white);
   cursor: pointer;
   display: flex;
   font-family: 'Open Sans Condensed';
@@ -17,30 +17,30 @@
   width: auto;
 
   &:hover {
-    background-color: white;
-    border: 1px solid black;
-    color: black;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    color: var(--black);
   }
 
   &.google-signin {
-    background-color: #4285f4;
-    color: white;
+    background-color: var(--blue);
+    color: var(--white);
 
     &:hover {
-      background-color: #357ae8;
+      background-color: var(--blueHover);
       border: none;
     }
   }
 
   &.inverted {
-    background-color: white;
-    border: 1px solid black;
-    color: black;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    color: var(--black);
 
     &:hover {
-      background-color: black;
+      background-color: var(--black);
       border: none;
-      color: white;
+      color: var(--white);
     }
   }
 }

@@ -1,3 +1,15 @@
+:root {
+  --background: #fbfbfb;
+  --text: #313131;
+  --white: #ffffff;
+  --black: #212121;
+  --grey: grey;
+  --greyDark: darkgrey;
+  --blue: #4285f4;
+  --blueHover: #357ae8;
+  --tealDark: #2f8e89;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -11,17 +23,25 @@ html {
 }
 
 body {
+  background-color: var(--background);
+  color: var(--text);
   font-family: 'Open Sans Condensed', sans-serif;
   padding: 20px 40px;
 }
 
 a {
-  color: black;
+  color: var(--black);
   text-decoration: none;
 }
 
 @media screen and (max-width: 800px) {
   body {
     padding: 10px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    max-width: 80%;
   }
 }

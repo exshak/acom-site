@@ -53,12 +53,13 @@
     }
 
     .price {
+      text-align: right;
       width: 10%;
     }
   }
 
   @media screen and (max-width: 800px) {
-    width: 40vw;
+    width: 100%;
 
     &:hover {
       .image {
@@ -69,5 +70,9 @@
         opacity: unset;
       }
     }
+  }
+
+  @media screen and (min-width: 1300px) {
+    width: 18vw;
   }
 }

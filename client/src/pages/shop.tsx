@@ -4,13 +4,13 @@ import { Route } from 'react-router-dom'
 import Spinner from '../components/common/spinner'
 import { fetchCollectionsStart } from '../redux/shop/shopActions'
 
-const CollectionsOverviewContainer = lazy(() =>
+const ShopCollectionsContainer = lazy(() =>
   // @ts-ignore FIXME:
-  import('../components/common/container/collectionsContainer')
+  import('../components/shopCollections/collectionsContainer')
 )
 const CollectionPageContainer = lazy(() =>
   // @ts-ignore FIXME:
-  import('../components/common/container/collectionContainer')
+  import('../components/shopCollections/collectionContainer')
 )
 
 const ShopPage = ({ fetchCollectionsStart, match }: any) => {
@@ -24,7 +24,7 @@ const ShopPage = ({ fetchCollectionsStart, match }: any) => {
         <Route
           exact
           path={`${match.path}`}
-          component={CollectionsOverviewContainer}
+          component={ShopCollectionsContainer}
         />
         <Route
           path={`${match.path}/:collectionId`}
