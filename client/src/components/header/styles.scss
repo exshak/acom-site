@@ -14,10 +14,21 @@
     // padding: 25px;
     width: 70px;
 
+    .logo {
+      display: none;
+    }
+
     @media screen and (max-width: 800px) {
-      opacity: 0;
       padding: 0;
       width: 50px;
+
+      .logo-name {
+        display: none;
+      }
+
+      .logo {
+        display: inherit;
+      }
     }
   }
 
@@ -41,6 +52,6 @@
   @media screen and (max-width: 800px) {
     height: 60px;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 5px;
   }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { createStructuredSelector } from 'reselect'
+import { ReactComponent as LogoName } from '../../assets/icons/logo-full.svg'
 import { ReactComponent as Logo } from '../../assets/icons/logo.svg'
 import { selectCartHidden } from '../../redux/cart/cartSelectors'
 import { signOutStart } from '../../redux/user/userActions'
@@ -13,12 +14,10 @@ import './styles.scss'
 const Header = ({ currentUser, hidden, signOutStart }: any) => (
   <div className='header'>
     <Link className='logo-container' to='/'>
+      <LogoName className='logo-name' />
       <Logo className='logo' />
     </Link>
     <div className='options'>
-      <Link className='option' to='/'>
-        HOME
-      </Link>
       <Link className='option' to='/shop'>
         SHOP
       </Link>
