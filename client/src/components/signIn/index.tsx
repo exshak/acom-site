@@ -37,17 +37,17 @@ const SignIn = ({ emailSignInStart, googleSignInStart }: any) => {
         <FormInput
           name='email'
           type='email'
+          label='Email'
           value={email}
           handleChange={handleChange}
-          label='Email'
           required
         />
         <FormInput
           name='password'
           type='password'
+          label='Password'
           value={password}
           handleChange={handleChange}
-          label='Password'
           required
         />
         <div className='buttons'>

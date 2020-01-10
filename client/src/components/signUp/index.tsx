@@ -36,37 +36,38 @@ const SignUp = ({ signUpStart }: any) => {
     <div className='sign-up'>
       <h2 className='title'>I do not have a account</h2>
       <span>Sign up with your email and password</span>
-      <form className='sign-up-form' onSubmit={handleSubmit}>
+
+      <form className='signup-form' onSubmit={handleSubmit}>
         <FormInput
           type='text'
           name='displayName'
+          label='Display Name'
           value={displayName}
           onChange={handleChange}
-          label='Display Name'
           required
         />
         <FormInput
           type='email'
           name='email'
+          label='Email'
           value={email}
           onChange={handleChange}
-          label='Email'
           required
         />
         <FormInput
           type='password'
           name='password'
+          label='Password'
           value={password}
           onChange={handleChange}
-          label='Password'
           required
         />
         <FormInput
           type='password'
           name='confirmPassword'
+          label='Confirm Password'
           value={confirmPassword}
           onChange={handleChange}
-          label='Confirm Password'
           required
         />
         <Button type='submit'>SIGN UP</Button>

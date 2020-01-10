@@ -67,7 +67,7 @@ Visit site at _`localhost:3000`_
 - [Sass](https://sass-lang.com)
 - [Firebase](https://firebase.google.com)
 - [Enzyme](https://airbnb.io/enzyme)
-- [Heroku](https://netlify.com)
+- [Heroku](https://heroku.com)
 
 #### Folder Structure
 
