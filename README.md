@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://apex-apparel.herokuapp.com">
-    <img src="./client/src/assets/icons/logo-full.svg" alt="Apex Apparel" width="300" />
+    <img src="./client/src/assets/icons/logo-full.svg" alt="Apex Apparel" width="500" />
   </a>
 </p>
 
@@ -24,19 +24,19 @@
 
 ---
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Apex Apparel is an E-commerce application for clothing and outerwear, built with React, Redux and payment processing using the Stripe checkout API. It uses E-mail or Google OAuth for customer authentication by integrating Firebase Auth Services, product data is stored on the Cloud Firestore database.
 
 _Have a great idea to contribute? Make a pull request, I'm always looking for ways to improve [Apex Apparel](https://apex-apparel.herokuapp.com)._
 
 ## Features
 
 - Carousel & Gallery
-- Cloud Firestore noSQL
+- Cloud Firestore NoSQL
 - Firebase Authentication
 - Google Forms & OAuth 2.0
 - React Lazy, Suspense, Memo
-- Redux Hydrate & Persist
-- Stripe Checkout
+- Redux Persist & Reselect
+- Stripe Checkout API
 - Heroku CD
 - PWA
 - SEO
@@ -78,7 +78,7 @@ client/
 │   ├── assets        # Icons and images
 │   ├── components    # Javascript and css
 │   ├── firebase      # Firebase/store config
-│   ├── pages         # Site index and routes
+│   ├── pages         # Site pages and routes
 │   └── redux         # Actions, reducers, sagas
 └── index.tsx         # Store, router, persistgate
 ```
