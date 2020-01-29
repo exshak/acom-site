@@ -1,7 +1,5 @@
 import React from 'react'
 import Slider from 'react-slick'
-import 'slick-carousel/slick/slick-theme.css'
-import 'slick-carousel/slick/slick.css'
 import slideBlue from '../../assets/images/slide-blue.jpg'
 import slidePink from '../../assets/images/slide-pink.jpg'
 import slideTeal from '../../assets/images/slide-teal.jpg'

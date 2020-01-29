@@ -13,7 +13,7 @@ import './styles.scss'
 
 const Header = ({ currentUser, hidden, signOutStart }: any) => (
   <div className='header'>
-    <Link className='logo-container' to='/'>
+    <Link aria-label='Visit Apex Apparel' className='logo-container' to='/'>
       <LogoName className='logo-name' />
       <Logo className='logo' />
     </Link>

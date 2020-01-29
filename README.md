@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://apex-apparel.herokuapp.com">
-    <img src="./client/src/assets/icons/logo-full.svg" alt="Apex Apparel" width="500" />
+    <img src="./client/src/assets/icons/logo-full.svg" alt="Apex Apparel" width="400" />
   </a>
 </p>
 
